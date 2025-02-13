@@ -1,0 +1,324 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #E0C59D;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 40px; /* Mayor espacio debajo del navbar */
+    background-color: #422918;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    flex-grow: 1;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Estilo del título */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 40px 0; /* Más espacio arriba y abajo */
+}
+
+/* Línea divisoria */
+.line-divider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0; /* Más espacio arriba y abajo */
+    height: 4px;
+    background-color: #603813;
+    width: 100%;
+}
+
+/* Estilo para el título "Proyectos" */
+.proyectos-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 60px 0 30px; /* Mayor espacio arriba */
+    position: relative;
+}
+
+.proyectos-title::before,
+.proyectos-title::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    background-color:  #603813;
+    top: -10px;
+    transform: translateY(-50%);
+}
+
+.proyectos-title::before {
+    left: 0;
+}
+
+.proyectos-title::after {
+    right: 0;
+}
+
+/* Estilo para el título "Eventos" */
+.eventos-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 60px 0 30px; /* Más separación entre secciones */
+    position: relative;
+}
+
+.eventos-title::before,
+.eventos-title::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    background-color: #603813;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.eventos-title::before {
+    left: 0;
+}
+
+.eventos-title::after {
+    right: 0;
+}
+
+/* Galería */
+.gallery-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 60px auto; /* Más espacio entre secciones */
+    width: 90%;
+    max-width: 1200px;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 5px;
+    gap: 5px;
+}
+
+.gallery-row.combined {
+    height: 500px;
+}
+
+.project-item {
+    flex: 1;
+    margin: 0;
+    display: flex; /* Para asegurar que la imagen llene su espacio */
+}
+
+.project-middle {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0;
+    gap: 5px;
+}
+
+.project-middle .project-item {
+    flex: 1;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    border-radius: 5px;
+}
+
+/* Tamaños uniformes */
+.project-item.image-large {
+    height: 500px;
+}
+
+.project-item.image-small {
+    height: 200px;
+}
+
+/* Footer */
+.footer {
+    background-color: #422918;
+    color: white;
+    padding: 20px;
+    margin-top: 80px; /* Más separación antes del footer */
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    padding-left: 15%;
+}
+
+/* Estilo para los iconos dentro del footer */
+.footer .icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Más espacio arriba */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {  
+    /* Navbar */  
+    .navbar-brand {  
+        font-size: 24px;  
+    }  
+
+    /* Títulos de proyectos y eventos sin margen ni líneas rojas */  
+    .proyectos-title,  
+    .eventos-title {  
+        font-size: 2rem;  
+        text-align: center;  
+    }  
+
+    /* Video más grande */  
+    video {  
+        width: 100%;  
+        height: auto;  
+        margin-bottom: 15px;  
+    }  
+
+    
+
+    
+    .gallery-row {  
+        display: flex; /* Usar flexbox para el contenedor */  
+        flex-direction: column; /* Alinear las imágenes en columna */  
+        align-items: center; /* Centrar horizontalmente las imágenes */  
+        gap: 10px; /* Añadir espacio entre las imágenes */  
+    }  
+
+    .project-item {  
+        width: 80%; /* Hace que el contenedor de las imágenes sea más grande */  
+        margin: 0 auto; /* Centra el contenedor de cada imagen */  
+        display: flex; /* Mantener cada item flexible */  
+        justify-content: center; /* Centra la imagen dentro del item */  
+        overflow: hidden; /* Evitar el desbordamiento de contenido */  
+    }  
+
+    .project-item img {  
+        width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */  
+        height: auto; /* Mantener la proporción original de la imagen */  
+        max-height: 250px; /* Ajustar la altura máxima de las imágenes */  
+        object-fit: cover; /* Mantener la proporción y recortar la imagen si es necesario */  
+    }  
+
+    /* Ajuste del footer para pantallas pequeñas */  
+    .footer .container {  
+        text-align: left;  
+        padding-left: 15px;  
+    }  
+
+    .footer .icon {  
+        margin-right: 10px;  
+    }  
+
+    /* Reducción de íconos sociales */  
+    .social-icons a {  
+        margin-right: 8px;  
+    }  
+
+    /* Ajustes adicionales del footer */  
+    .footer p {  
+        margin: 5px 0;  
+        padding-left: 3%;  
+    }  
+}  
+
+/* Estilos para pantallas muy pequeñas (móviles) */  
+@media (max-width: 480px) {  
+    /* Navbar */  
+    .navbar-brand {  
+        font-size: 20px;  
+    }  
+
+    /* Títulos de proyectos y eventos sin margen ni líneas rojas */  
+    .proyectos-title,  
+    .eventos-title {  
+        font-size: 1.8rem;  
+        text-align: center;  
+    }  
+
+    /* Video más grande */  
+    video {  
+        width: 100%;  
+        height: auto;  
+        margin-bottom: 15px;  
+    }  
+
+    /* Galería: imágenes en una sola columna en bloque */  
+    .gallery-container {  
+        display: block;  
+    }  
+
+    .project-item img {  
+        width: 100%;  
+        height: auto;  
+        object-fit: cover;  
+        border-radius: 5px;  
+        display: block; /* Se apilan correctamente */  
+        margin-bottom: 5px; /* Espacio entre imágenes */  
+    }  
+
+    /* Ajuste del footer para pantallas pequeñas */  
+    .footer .container {  
+        text-align: left;  
+        padding-left: 15px;  
+    }  
+}    
+

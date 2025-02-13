@@ -1,0 +1,371 @@
+
+
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #E0C59D;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+    background-color: #422918;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    flex-grow: 1;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Estilo del título */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Línea divisoria */
+.line-divider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    height: 4px;
+    background-color: #422918;
+    width: 100%;
+}
+
+/* Estilo para el título "Proyectos" */
+.proyectos-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.proyectos-title::before,
+.proyectos-title::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    background-color: #422918;
+    top: -10px;
+    transform: translateY(-50%);
+}
+
+.proyectos-title::before {
+    left: 0;
+}
+
+.proyectos-title::after {
+    right: 0;
+}
+
+/* Estilo para el título "Eventos" */
+.eventos-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.eventos-title::before,
+.eventos-title::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    background-color: #422918;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.eventos-title::before {
+    left: 0;
+}
+
+.eventos-title::after {
+    right: 0;
+}
+
+/* Estilos generales para la galería */
+.gallery-container {  
+    border: 1px solid #ddd;   
+    border-radius: 8px;   
+    padding: 20px;   
+    background-color: #fff;   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+    margin: 20px auto;   
+    width: 90%;   
+    max-width: 1200px;   
+}
+
+.gallery-row.combined {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 500px;
+    margin-bottom: 15px;
+}
+
+.gallery-row.combined > .project-item {
+    flex: 1;
+    margin: 3px;
+}
+
+.project-middle {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.project-middle .project-item {
+    flex: 1;
+    margin: 3px;
+}
+
+.project-middle .project-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.gallery-row:not(.combined) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 350px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.gallery-row:not(.combined) .project-item {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 3px;
+}
+
+.project-item {
+    position: relative;
+    margin: 3px;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+}
+
+.project-item img {  
+    width: 100%;   
+    height: 100%;  
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin: 3px;
+}
+
+.project-item p {  
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 105, 180, 0.7);
+    color: white;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 15%;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-size: 1.1em;
+    white-space: normal;
+    text-align: center;
+}
+
+.footer {
+    background-color: #422918;
+    color: white;
+    padding: 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    padding-left: 15%;
+}
+
+.footer .icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    margin: 3px;
+}
+.project-item p {  
+    display: none;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+    background-color: white;
+}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {  
+    /* Navbar */  
+    .navbar-brand {  
+        font-size: 24px;  
+    }  
+
+    /* Video más grande */  
+    video {  
+        width: 100%;  
+        height: auto;  
+        margin-bottom: 15px;  
+    }  
+
+    /* Galería: hacer la fila de imágenes en columna */
+    .gallery-row {  
+        display: flex; /* Usar flexbox para el contenedor */  
+        flex-direction: column; /* Alinear las imágenes en columna */  
+        align-items: center; /* Centrar horizontalmente las imágenes */  
+        gap: 10px; /* Añadir espacio entre las imágenes */  
+    }  
+
+    .project-item {  
+        width: 80%; /* Hace que el contenedor de las imágenes sea más grande */  
+        margin: 0 auto; /* Centra el contenedor de cada imagen */  
+        display: flex; /* Mantener cada item flexible */  
+        justify-content: center; /* Centra la imagen dentro del item */  
+        overflow: hidden; /* Evitar el desbordamiento de contenido */  
+    }  
+
+    .project-item img {  
+        width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */  
+        height: auto; /* Mantener la proporción original de la imagen */  
+        max-height: 250px; /* Ajustar la altura máxima de las imágenes */  
+        object-fit: cover; /* Mantener la proporción y recortar la imagen si es necesario */  
+    }  
+
+    /* Ajuste del footer para pantallas pequeñas */  
+    .footer .container {  
+        text-align: left;  
+        padding-left: 15px;  
+    }  
+    .project-item p {  
+        display: none;
+    }
+    #sub{
+        display: n;
+    }
+
+    .footer .icon {  
+        margin-right: 10px;  
+    }  
+
+    /* Reducción de íconos sociales */  
+    .social-icons a {  
+        margin-right: 8px;  
+    }  
+
+    /* Ajustes adicionales del footer */  
+    .footer p {  
+        margin: 5px 0;  
+        padding-left: 3%;  
+    }  
+}  
+
+/* Estilos para pantallas muy pequeñas (móviles) */  
+@media (max-width: 480px) {  
+    /* Navbar */  
+    .navbar-brand {  
+        font-size: 20px;  
+    }  
+
+    /* Video más grande */  
+    video {  
+        width: 100%;  
+        height: auto;  
+        margin-bottom: 15px;  
+    }  
+    .project-item p {  
+        display: none;
+    }
+
+    /* Galería: imágenes en una sola columna en bloque */
+    .gallery-row {  
+        display: block; /* Cambiado a bloque para apilar las imágenes en columna */  
+    }
+
+    .project-item img {  
+        width: 100%;  
+        height: auto;  
+        object-fit: cover;  
+        border-radius: 5px;  
+        display: block; /* Se apilan correctamente */  
+        margin-bottom: 5px; /* Espacio entre imágenes */  
+    }  
+ 
+
+
+    /* Ajuste del footer para pantallas pequeñas */  
+    .footer .container {  
+        text-align: left;  
+        padding-left: 15px;  
+    }  
+} 
